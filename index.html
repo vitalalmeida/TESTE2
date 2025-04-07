@@ -1,248 +1,453 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
-  <!-- Bootstrap Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
-  <link rel="stylesheet" href="style.css" />
-    <script src="menu.js" defer></script>
-</head>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de inscrição Trilhas Inova 2B</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
-  <header>
-    <div class="interface">
-      <div class="logo">
-        <img src="logos/logoTRILHAS.svg" width="130" height="100" alt="logo__image" />
-      </div>
-      <nav class="menu-desktop">
-        <ul>
-          <li><a href="">Início</a></li>
-          <li><a href="#especialidades">Cursos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#Projetos">Projetos</a></li>
-        </ul>
-      </nav>
-      <div class="btn-contato">
-        <a href="#contatos">
-          <button>Contato</button>
-        </a>
-      </div>
+  <body>
+    <main>
+      <section class="container">
+        <form id="formulario" action="#" class="form">
+          <h2 class="form__subtitulo">Informações Pessoais</h2>
+          <div class="input__box">
+            <label class="form__label" for="nomeCompleto">Nome Completo*</label>
+            <input
+              id="nomeCompleto"
+              class="form__input__preenche"
+              type="text"
+              name="nomeCompleto"
+              placeholder="Insira seu nome completo"
+              pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]+$"
+              maxlength="50"
+              required />
+          </div>
 
-      <div class="btn-abrir-menu" id="btn-menu">
-        <i class="bi bi-list"></i>
-      </div>
-      <div class="menu-mobile" id="menu-mobile">
-        <div class="btn-fechar">
-            <i class="bi bi-x-lg"></i>
-        </div>
-        <nav>
-            <ul>
-              <li><a href="">Início</a></li>
-              <li><a href="#especialidades">Cursos</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#Projetos">Projetos</a></li>
-              <li><a href="#contatos">Contato</a></li>
-            </ul>
-          </nav>
-      </div>
-      <div class="overlay-menu" id="overlay-menu"></div>
-    </div>
-  </header>
-
-  <main>
-    <section class="topo-do-site">
-      <div class="interface">
-        <div class="flex">
-          <div class="txt-top-site">
-            <h1>JÁ PENSOU EM CRIAR SEUS PRÓPRIOS SITES, APPS OU JOGOS<span>?</span></h1>
-            <p class="pr">
-              Programar é como aprender uma nova linguagem — só que essa te dá o poder de construir o futuro! Seja qual
-              for sua área, a programação pode abrir novas portas e oportunidades. E o melhor: qualquer pessoa pode
-              começar, mesmo do zero.<br /><br />Dê o primeiro passo hoje e descubra o que você é capaz de criar com
-              código! 🚀
-            </p>
-            <div class="btn-contato">
-              <button id="btn-inscreva">INSCREVA-SE</button>
+          <div class="column">
+            <div class="input__box">
+              <label class="form__label" for="email">E-mail*</label>
+              <input
+                id="email"
+                class="form__input__preenche"
+                type="email"
+                name="email"
+                placeholder="Exemplo: email@email.com"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                required />
+            </div>
+            <div class="input__box">
+              <label class="form__label" for="sexo">Sexo*</label>
+              <div class="drop-box">
+                <select id="sexo" name="sexo">
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="nao_opinar">Prefiro não opinar</option>
+                </select>
+              </div>
             </div>
           </div>
-          <div class="img-topo-site">
-            <img src="/logos/aluno.svg" class="img-s" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="especialidades" id="especialidades">
-      <div class="interface">
-        <h2 class="titulo">NOSSOS <span>CURSOS</span></h2>
-        <div class="flex">
-          <div class="especialidades-box">
-            <i class="bi bi-bar-chart"></i>
-            <h3>DADOS</h3>
-            <p>Ciência de dados: Análise, estatística, previsão, insights, automação.</p>
-          </div>
+          <div class="column">
+            <div class="input__box">
+              <label class="form__label" for="telefone"
+                >Telefone Celular*</label
+              >
+              <input
+                id="telefone"
+                class="form__input__preenche"
+                type="tel"
+                name="telefone"
+                placeholder="Exemplo: (98) 99999-9999"
+                maxlength="15"
+                pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+                title="Formato: (98) 99999-9999"
+                required />
+            </div>
 
-          <div class="especialidades-box">
-            <i class="bi bi-border"></i>
-            <h3>BACK-END</h3>
-            <p>Lógica, dados, servidor, segurança, desempenho.</p>
-          </div>
-
-          <div class="especialidades-box">
-            <i class="bi bi-border-all"></i>
-            <h3>FRONT-END</h3>
-            <p>Visual, interativo, responsivo, acessível e dinâmico.</p>
-          </div>
-
-          <div class="especialidades-box">
-            <i class="bi bi-controller"></i>
-            <h3>JOGOS</h3>
-            <p>Interatividade, lógica, design, diversão, imersão.</p>
-          </div>
-
-          <div class="especialidades-box">
-            <i class="bi bi-laptop"></i>
-            <h3>UX Design</h3>
-            <p>Usabilidade, acessibilidade, experiência, interação, empatia.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sobre" id="sobre">
-      <div class="interface">
-        <div class="flex">
-          <div class="img-sobre">
-            <img src="logos/INOVACE.png" alt="imagem-vital" width="200" height="400" />
-          </div>
-          <div class="txt-sobre">
-            <h2>MUITO PRAZER, <span>SOMOS O INOVA MARANHÃO</span></h2>
-            <p>
-              O Inova Maranhão é um Programa do Governo do Estado veiculado à Secretaria de Estado da Ciência,
-              Tecnologia e Inovação (SECTI) que tem como objetivo estimular junto à sociedade maranhense o
-              desenvolvimento de ações voltadas para a inovação, empreendedorismo, desenvolvimento tecnológico,
-              desenvolvimento sustentável e inovação social. O programa nasceu em 2015, inicialmente somente com um
-              programa de incubação de Startup e atualmente possui oito eixos estratégicos.
-            </p>
-
-            <div class="btn-social">
-              <a href="https://www.instagram.com/inovamaranhao/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-              <a href="https://www.youtube.com/channel/UCr_n2KPPqE0meSX7pCPlDzw" target="_blank"><button><i class="bi bi-youtube"></i></button></a>
+            <div class="input__box">
+              <label class="form__label" for="dataNascimento"
+                >Data de Nascimento*</label
+              >
+              <input
+                id="dataNascimento"
+                class="form__input__preenche"
+                type="date"
+                name="dataNascimento"
+                max="2009-04-01"
+                min="1925-01-01"
+                required />
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="portfolio" id="Projetos">
-      <div class="interface">
-        <h2 class="titulo">NOSSOS <span>PROJETOS</span></h2>
-        <div class="flex">
-          <div class="img-port" style="background-image: url(images/portfolio.svg);">
-            <div class="overlay">Projeto 1</div>
-          </div>
-          <div class="img-port" style="background-image: url(images/portfolio.svg);">
-            <div class="overlay">Projeto 2</div>
-          </div>
-          <div class="img-port" style="background-image: url(images/portfolio.svg);">
-            <div class="overlay">Projeto 3</div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="column">
+            <div class="input__box">
+              <label class="form__label" for="cpf">CPF*</label>
+              <input
+                id="cpf"
+                class="form__input__preenche"
+                type="text"
+                name="cpf"
+                placeholder="Exemplo: xxx.xxx.xxx-xx"
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                required />
+            </div>
 
-    <section class="formulario" id="contatos">
-      <div class="interface">
-        <h2 class="titulo">FALE <span>CONOSCO</span></h2>
-        <form>
-          <input type="text" placeholder="Seu nome completo:" required />
-          <input type="text" placeholder="Seu e-mail:" required />
-          <input type="text" placeholder="Seu celular:" />
-          <textarea placeholder="Sua mensagem:" required></textarea>
-          <div class="btn-enviar"><input type="submit" value="ENVIAR" /></div>
-          
+            <div class="input__box">
+              <label class="file" for="file-upload1">
+                <img id="upload-icon1" src="./assets/uploadFile.svg" alt="" />
+                Documento de identidade (PDF)*
+              </label>
+              <input
+                id="file-upload1"
+                type="file"
+                name="identidade"
+                accept="application/pdf"
+                required />
+              <span class="file-validation-msg"
+                >Você deve enviar um arquivo.</span
+              >
+            </div>
+          </div>
+
+          <h2 class="form__subtitulo">Informações de Endereço</h2>
+          <div class="input__box">
+            <label class="form__label" for="endereco">Endereço*</label>
+            <input
+              id="endereco"
+              class="form__input__preenche"
+              placeholder="Insira seu endereço"
+              type="text"
+              name="endereco"
+              required />
+          </div>
+
+          <div class="column">
+            <div class="input__box">
+              <label class="form__label" for="bairro">Bairro*</label>
+              <input
+                id="bairro"
+                class="form__input__preenche"
+                placeholder="Insira apenas o seu Bairro"
+                type="text"
+                name="bairro"
+                pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]+$"
+                required />
+            </div>
+
+            <div class="input__box">
+              <label class="form__label" for="numero">Número*</label>
+              <input
+                id="numero"
+                class="form__input__preenche"
+                placeholder="Insira o número da sua residência"
+                type="text"
+                name="numero"
+                pattern="\d+"
+                required />
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="input__box">
+              <label class="form__label" for="estado">Estado*</label>
+              <input
+                id="estado"
+                class="form__input__preenche"
+                placeholder="Insira o Estado que você reside"
+                type="text"
+                name="estado"
+                pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]+$"
+                required />
+            </div>
+
+            <div class="input__box">
+              <label class="form__label" for="cidade">Cidade*</label>
+              <input
+                id="cidade"
+                class="form__input__preenche"
+                placeholder="Insira a cidade que você mora"
+                type="text"
+                name="cidade"
+                pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]+$"
+                required />
+            </div>
+          </div>
+          <div class="column">
+            <div class="input__box">
+              <label class="form__label" for="cep">CEP*</label>
+              <input
+                id="cep"
+                class="form__input__preenche"
+                placeholder="Insira seu CEP"
+                type="text"
+                name="cep"
+                pattern="\d{5}-\d{3}"
+                required />
+            </div>
+
+            <div class="input__box">
+              <label class="file" for="file-upload2">
+                <img id="upload-icon2" src="./assets/uploadFile.svg" alt="" />
+                Comprovante de Residência (PDF)*
+              </label>
+              <input
+                id="file-upload2"
+                type="file"
+                name="comprovanteResidencia"
+                accept="application/pdf"
+                required />
+              <span class="file-validation-msg"
+                >Você deve enviar um arquivo.</span
+              >
+            </div>
+          </div>
+
+          <h2 class="form__subtitulo">Escolaridade e Certificado</h2>
+
+          <div class="column">
+            <div class="input__box">
+              <label class="form__label" for="escolaridade"
+                >Grau de Escolaridade*</label
+              >
+              <div class="drop-box">
+                <select id="escolaridade" name="escolaridade">
+                  <option value="ensino_medio">Ensino Médio</option>
+                  <option value="ensino_superior">Ensino Superior</option>
+                  <option value="pos_graduado">Pós-Graduado</option>
+                  <option value="mestrado">Mestrado</option>
+                  <option value="doutorado">Doutorado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input__box">
+              <label class="file" for="file-upload3">
+                <img id="upload-icon3" src="./assets/uploadFile.svg" alt="" />
+                Certificado do Ensino Médio ou declaração da escola (PDF)*
+              </label>
+              <input
+                id="file-upload3"
+                type="file"
+                name="certificadoEscolaridade"
+                accept="application/pdf"
+                required />
+              <span class="file-validation-msg"
+                >Você deve enviar um arquivo.</span
+              >
+            </div>
+          </div>
+
+          <h2 class="form__subtitulo">Formação em Tecnologia</h2>
+
+          <div class="selection__box">
+            <label class="form__label" for="areaInteresse"
+              >Qual área da tecnologia você tem interesse aprender?*</label
+            >
+
+            <div class="select__option">
+              <div class="trilhas">
+                <input
+                  type="radio"
+                  id="check-back"
+                  name="trilhas"
+                  value="back_end"
+                  required />
+                <img src="./img/back logo.svg" alt="logo backend" />
+                <label for="check-back">Programação Back End</label>
+              </div>
+              <div class="trilhas">
+                <input
+                  type="radio"
+                  id="check-dados"
+                  name="trilhas"
+                  value="ciencia_dados"
+                  required />
+                <img src="./img/dados logo.svg" alt="logo ciencia de dados" />
+                <label for="check-dados">Ciência de Dados</label>
+              </div>
+              <div class="trilhas">
+                <input
+                  type="radio"
+                  id="check-ux"
+                  name="trilhas"
+                  value="ux_design"
+                  required />
+                <img src="./img/UX logo.svg" alt="logo ux design" />
+                <label for="check-ux">UX Design</label>
+              </div>
+              <div class="trilhas">
+                <input
+                  type="radio"
+                  id="check-front"
+                  name="trilhas"
+                  value="front_end"
+                  required />
+                <img src="./img/logofrontend.svg" alt="logo frontend" />
+                <label for="check-front">Programação Front End</label>
+              </div>
+              <div class="trilhas">
+                <input
+                  type="radio"
+                  id="check-jogos"
+                  name="trilhas"
+                  value="programacao_jogos"
+                  required />
+                <img
+                  src="./img/jogos logo.svg"
+                  alt="logo programacao de jogos" />
+                <label for="check-jogos">Programação de Jogos</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="selection__box">
+            <h2 class="form__subtitulo">
+              Qual seu nível de conhecimento na área selecionada anteriormente?*
+            </h2>
+            <label class="form__label" for="nivelConhecimento"
+              >Em uma escala de 1 a 5:</label
+            >
+
+            <div class="column">
+              <div class="input__box">
+                <div class="drop-box">
+                  <select id="nivelConhecimento" name="nivelConhecimento">
+                    <option value="1">1- Estou começando</option>
+                    <option value="2">2- Acho que estou entendendo</option>
+                    <option value="3">3- Ta começando fazer sentido</option>
+                    <option value="4">4- Olha só, sou bom nisso</option>
+                    <option value="5">5-Ja quero meu emprego</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="input__box--mobile">
+            <label class="form__label" for="motivacao"
+              >O que te motiva a participar do programa?*</label
+            >
+            <textarea
+              id="motivacao"
+              class="form__input__preenche"
+              name="motivacao"
+              placeholder="Escreva um pequeno texto..."
+              maxlength="160"
+              required></textarea>
+          </div>
+
+          <div class="text__warning">
+            <h3>Por favor, revise todas as informações antes de enviar</h3>
+            <h3>*Campo obrigatório</h3>
+          </div>
+
+          <div>
+            <div class="input__box">
+              <label class="form__label" for="idUsuario"
+                >ID do Usuário(CPF)*</label
+              >
+              <input
+                id="idUsuario"
+                class="form__input__preenche"
+                type="text"
+                name="idUsuario"
+                placeholder="Digite seu ID"
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                required />
+            </div>
+
+            <div class="input__box">
+              <label class="form__label" for="senha">Senha*</label>
+              <input
+                id="senha"
+                class="form__input__preenche"
+                type="password"
+                name="senha"
+                placeholder="Digite sua senha"
+                required />
+            </div>
+            <div class="botao_salvar">
+              <button id="salvebutton" type="button" class="form__button">
+                Salvar
+              </button>
+            </div>
+          </div>
         </form>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer>
-    <div class="interface">
-      <div class="line-footer">
-        <div class="flex">
-          <div class="logo-footer">
-            <img src="logos/logoTRILHAS.svg" class="apt" width="150" height="100" alt="" style="margin-right: 20px;" />
-            <img src="logos/secti.PNG" width="350" height="120" alt="" />
+      <div class="container__2">
+        <h2>Formulário de Inscrição</h2>
+
+        <img
+          class="logoTrilhas"
+          src="./assets/logoTrilhas.svg"
+          alt="Logo do programa Trilhas Inova 2B" />
+
+        <div class="container__2__apresentacao">
+          <p>
+            O Trilhas Inova 2B é um programa de qualificação profissional de
+            curta duração que oferece cursos nas áreas de Programação, Design de
+            Experiência do Usuário, Ciência de Dados e Desenvolvimento de Games.
+            A iniciativa visa capacitar jovens para o mercado de trabalho,
+            fomentando o empreendedorismo e a inovação no estado.
+          </p>
+        </div>
+
+        <img class="aluno" src="./img/aluno.svg" alt="Ilustração de um aluno" />
+
+        <img class="logoInova" src="./img/logo do aluno.svg" alt="Logo Inova" />
+
+        <div class="container__2__inscricao">
+          <div class="container__2__declaracao__inscricao">
+            <input
+              type="checkbox"
+              id="aceitoTermos"
+              form="formulario"
+              name="declaracao"
+              required />
+            <label for="declaracao">
+              Declaro que li todo o Edital e que todas as informações fornecidas
+              por mim neste formulário são verdadeiras.
+            </label>
           </div>
 
-          <div class="btn-social">
-            <a href="https://www.instagram.com/inovamaranhao/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-            <a href="https://www.youtube.com/channel/UCr_n2KPPqE0meSX7pCPlDzw" target="_blank"><button><i class="bi bi-youtube"></i></button></a>
+          <div class="botoes__submit">
+            <input
+              type="submit"
+              id="botaoCancelar"
+              form="formulario"
+              value="CANCELAR" />
+            <input
+              type="submit"
+              id="botaoInscrever"
+              form="formulario"
+              value="INSCREVER-SE" />
           </div>
         </div>
       </div>
-      <div class="line-footer borda">
-        <p><i class="bi bi-envelope-at"></i> <a href="mailto:descubra@secti.ma.gov.br">descubra@secti.ma.gov.br</a></p>
+      <div class="popup__wrapper">
+        <div class="popup">
+          <div class="popup__content">
+            <h3>Inscrição realizada!</h3>
+            <p>
+              Fique atento ao seu e-mail para prosseguir com os próximos passos
+              caso você seja aprovado nesta etapa.
+            </p>
+            <button type="button" class="popup__close">OK!</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </main>
+    <footer class="rodape">
+      <p class="rodape__link"></p>
 
-  <style>
-    p {
-      text-align: justify;
-    }
-  </style>
+      <img src="./assets/secti_branco.webp" alt="Secti Logo" />
+    </footer>
 
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const botaoInscreva = document.getElementById("btn-inscreva");
-      if (botaoInscreva) {
-        botaoInscreva.addEventListener("click", function () {
-          window.location.href = "../teste3/teste.html";
-        });
-      }
-  
-      const form = document.querySelector(".formulario form");
-  
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-  
-        // Criar o pop-up
-        const popup = document.createElement("div");
-        popup.classList.add("popup-sucesso");
-        popup.textContent = "Mensagem enviada com sucesso! Entraremos em contato em breve!";
-        document.body.appendChild(popup);
-  
-        // Mostrar com animação
-        setTimeout(() => {
-          popup.classList.add("mostrar");
-        }, 10);
-  
-        // Sumir depois de 3 segundos
-        setTimeout(() => {
-          popup.classList.remove("mostrar");
-          setTimeout(() => {
-            popup.remove();
-          }, 400);
-        }, 5000);
-  
-        form.reset();
-      });
-    });
-  </script>
-  
-</body>
+    <script src="./scripts/formAcao.js"></script>
+    <script src="./scripts/uploadButton.js"></script>
+  </body>
 </html>
